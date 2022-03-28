@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BaseQuery.Common\BaseQuery.Common.csproj" />
+    <ProjectReference Include="..\BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj" />
+    <ProjectReference Include="..\BaseQueryDemo.Model\BaseQueryDemo.Model.csproj" />
+  </ItemGroup>
+
+</Project>
