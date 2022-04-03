@@ -1,4 +1,6 @@
-﻿namespace BaseQuery.Common
+﻿using Mapster;
+
+namespace BaseQuery.Common
 {
     /// <summary>
     /// AutoMapper
@@ -7,12 +9,13 @@
     {
         public static T MapTo<F, T>(this F input)
         {
-            return default;
+            return input.Adapt<F, T>();
         }
 
         public static IEnumerable<T> MapTo<F, T>(this IEnumerable<F> input)
         {
-            return default;
+            var a = input.Adapt<IEnumerable<T>>();
+            return a;
         }
     }
 }

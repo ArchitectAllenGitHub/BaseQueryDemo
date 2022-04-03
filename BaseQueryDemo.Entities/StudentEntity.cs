@@ -21,7 +21,7 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 学号
         /// </summary>
-        public string Code { get; set; }
+        public string? Code { get; set; }
 
         /// <summary>
         /// 年龄

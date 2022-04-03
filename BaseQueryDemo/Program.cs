@@ -1,3 +1,8 @@
+using BaseQuery.Repository;
+using BaseQueryDemo.Extensions;
+using BaseQueryDemo.IRepository;
+using SqlSugar;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,11 +12,16 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddSqlSugar(builder.Environment, builder.Configuration);
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<ISchoolRepository, SchoolRepository>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.Services.GetRequiredService<ISqlSugarClient>().CreateDatabase();
     app.UseSwagger();
     app.UseSwaggerUI();
 }

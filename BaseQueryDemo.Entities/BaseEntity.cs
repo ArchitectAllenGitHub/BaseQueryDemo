@@ -21,7 +21,7 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 创建人Id
         /// </summary>
-        public string CreateUserId { get; set; }
+        public string? CreateUserId { get; set; }
 
         /// <summary>
         /// 修改时间
@@ -31,6 +31,6 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 修改人Id
         /// </summary>
-        public string UpdateUserId { get; set; }
+        public string? UpdateUserId { get; set; }
     }
 }

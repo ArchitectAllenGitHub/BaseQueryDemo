@@ -15,7 +15,7 @@ namespace BaseQueryDemo.Model.Response
         /// <summary>
         /// 学校名称
         /// </summary>
-        public string SchoolName { get; set; }
+        public string? SchoolName { get; set; }
 
         /// <summary>
         /// 学校编码Join使用
@@ -26,6 +26,6 @@ namespace BaseQueryDemo.Model.Response
         /// <summary>
         /// 学校地址
         /// </summary>
-        public string SchoolAdress { get; set; }
+        public string? SchoolAdress { get; set; }
     }
 }

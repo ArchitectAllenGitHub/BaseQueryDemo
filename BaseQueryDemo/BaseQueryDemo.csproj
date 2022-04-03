@@ -10,4 +10,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BaseQuery.Common\BaseQuery.Common.csproj" />
+    <ProjectReference Include="..\BaseQuery.Repository\BaseQuery.Repository.csproj" />
+    <ProjectReference Include="..\BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj" />
+    <ProjectReference Include="..\BaseQueryDemo.IRepository\BaseQueryDemo.IRepository.csproj" />
+    <ProjectReference Include="..\BaseQueryDemo.Model\BaseQueryDemo.Model.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -17,7 +17,7 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 排序集合
         /// </summary>
-        public IEnumerable<OrderByEntity> OrderByEntity { get; set; }
+        public string? OrderField { get; set; }
 
         /// <summary>
         /// 分页大小
@@ -31,7 +31,7 @@ namespace BaseQueryDemo.Entities
         /// </summary>
         [Required]
         [Range(1, int.MaxValue)]
-        public int PageIndex { get; set; }
+        public int PageIndex { get; set; } = 1;
 
         /// <summary>
         /// 总条数，不需要填写
@@ -48,6 +48,6 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 数据
         /// </summary>
-        public T Data { get; set; }
+        public T? Data { get; set; }
     }
 }

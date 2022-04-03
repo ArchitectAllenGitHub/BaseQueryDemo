@@ -9,12 +9,13 @@ namespace BaseQueryDemo.IRepository
     /// <summary>
     /// 基础仓储
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <typeparam name="I"></typeparam>
-    /// <typeparam name="A"></typeparam>
-    /// <typeparam name="M"></typeparam>
-    public class BaseRepository<T, I, A, M> : BaseDynamicExpression<T, I>, IRepository<T, I, A, M> where T : BaseEntity, new()
-        where I : class, new()
+    /// <typeparam name="T">实体参数</typeparam>
+    /// <typeparam name="C">新增参数</typeparam>
+    /// <typeparam name="U">修改参数</typeparam>
+    /// <typeparam name="R">读取参数</typeparam>
+    public class BaseRepository<T, C, U, R> : BaseDynamicExpression<T, R>, IRepository<T, C, U, R>
+        where T : BaseEntity, new()
+        where R : class, new()
     {
         protected readonly ISqlSugarClient _db;
 
@@ -27,37 +28,37 @@ namespace BaseQueryDemo.IRepository
         /// 新增
         /// </summary>
         /// <returns></returns>
-        public async Task<int> InsertAsync(A input)
+        public async Task<int> InsertAsync(C input)
         {
 
-            return await _db.Insertable<T>(input.MapTo<A, T>()).ExecuteCommandAsync();
+            return await _db.Insertable<T>(input.MapTo<C, T>()).ExecuteCommandAsync();
         }
 
         /// <summary>
         /// 新增
         /// </summary>
         /// <returns></returns>
-        public async Task<int> InsertAsync(IEnumerable<A> input)
+        public async Task<int> InsertAsync(IEnumerable<C> input)
         {
-            return await _db.Insertable<T>(input.MapTo<A, T>()).ExecuteCommandAsync();
+            return await _db.Insertable<T>(input.MapTo<C, T>()).ExecuteCommandAsync();
         }
 
         /// <summary>
         /// 修改
         /// </summary>
         /// <returns></returns>
-        public async Task<int> UpdateAsync(M input)
+        public async Task<int> UpdateAsync(U input)
         {
-            return await _db.Updateable<T>(input.MapTo<M, T>()).ExecuteCommandAsync();
+            return await _db.Updateable<T>(input.MapTo<U, T>()).ExecuteCommandAsync();
         }
 
         /// <summary>
         /// 修改
         /// </summary>
         /// <returns></returns>
-        public async Task<int> UpdateAsync(IEnumerable<M> input)
+        public async Task<int> UpdateAsync(IEnumerable<U> input)
         {
-            return await _db.Updateable<T>(input.MapTo<M, T>()).ExecuteCommandAsync();
+            return await _db.Updateable<T>(input.MapTo<U, T>()).ExecuteCommandAsync();
         }
 
         /// <summary>
@@ -103,7 +104,7 @@ namespace BaseQueryDemo.IRepository
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<T>> GetEntityListAsync(I input)
+        public async Task<IEnumerable<T>> GetEntityListAsync(R input)
         {
             return await this.GetSqlSugarExpression(input).ToListAsync();
         }
@@ -113,7 +114,7 @@ namespace BaseQueryDemo.IRepository
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public async Task<T> GetEntityAsync(I input)
+        public async Task<T> GetEntityAsync(R input)
         {
             return await this.GetSqlSugarExpression(input).FirstAsync();
         }
@@ -123,12 +124,12 @@ namespace BaseQueryDemo.IRepository
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<T>> GetPageAsync(PageEntity<I> input)
+        public async Task<IEnumerable<T>> GetPageEntityListAsync(PageEntity<R> input)
         {
             var res = this.GetSqlSugarExpression(input.Data);
 
-            foreach (var item in this.GetOrderBy(input.OrderByEntity))
-                res.OrderBy(item.OrderByExpression, item.Ascending ? OrderByType.Asc : OrderByType.Desc);
+            if (!string.IsNullOrEmpty(input.OrderField))
+                res.OrderBy(input.OrderField);
 
             return await res.ToPageListAsync(input.PageIndex, input.PageSize, input.Total);
         }
@@ -138,7 +139,7 @@ namespace BaseQueryDemo.IRepository
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        private ISugarQueryable<T> GetSqlSugarExpression(I input)
+        private ISugarQueryable<T> GetSqlSugarExpression(R input)
         {
             var res = GetExpression(input);
             return _db.Queryable<T>().WhereIF(res.Condition, res.Expression);

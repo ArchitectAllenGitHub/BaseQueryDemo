@@ -15,6 +15,6 @@ namespace BaseQueryDemo.Model.Input
         /// <summary>
         /// 枚举 IN
         /// </summary>
-        public IEnumerable<SchoolCategoryEnum?> Category_Contains { get; set; }
+        public IEnumerable<SchoolCategoryEnum?>? Category_Contains { get; set; }
     }
 }

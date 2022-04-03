@@ -16,7 +16,7 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 学校名称
         /// </summary>
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         /// <summary>
         /// 学校代码
@@ -26,7 +26,7 @@ namespace BaseQueryDemo.Entities
         /// <summary>
         /// 地址
         /// </summary>
-        public string Adress { get; set; }
+        public string? Adress { get; set; }
 
         /// <summary>
         /// 类别

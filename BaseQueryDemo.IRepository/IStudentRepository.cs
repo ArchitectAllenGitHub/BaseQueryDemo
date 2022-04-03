@@ -12,27 +12,27 @@ namespace BaseQueryDemo.IRepository
     /// <summary>
     /// 学生抽象仓储
     /// </summary>
-    public interface IStudentRepository : IRepository<StudentEntity, StudentQueryInput, StudentAddInput, StudentModifyInput>
+    public interface IStudentRepository : IRepository<StudentEntity, StudentAddInput, StudentModifyInput, StudentQueryInput>
     {
         /// <summary>
-        /// 
+        /// 多表关联
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         Task<IEnumerable<StudentEntity>> GetListAsync(StudentQueryInput input);
 
         /// <summary>
-        /// 
+        /// 多表关联-返回学生
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
         Task<IEnumerable<StudentEntity>> GetPageListAsync(PageEntity<StudentQueryInput> input);
 
         /// <summary>
-        /// 
+        /// 多表关联-返回自定义
         /// </summary>
         /// <param name="input"></param>
         /// <returns></returns>
-        Task<IEnumerable<StudentResponse>> GetPageList2Async(PageEntity<StudentQueryInput> input);
+        Task<IEnumerable<StudentResponse>> GetResponsePageListAsync(PageEntity<StudentQueryInput> input);
     }
 }
