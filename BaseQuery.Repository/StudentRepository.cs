@@ -10,7 +10,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BaseQuery.Repository
+namespace BaseQueryDemo.Repository
 {
     /// <summary>
     /// 学生仓储

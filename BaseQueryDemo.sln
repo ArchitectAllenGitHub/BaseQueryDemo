@@ -3,17 +3,29 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32319.34
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo", "BaseQueryDemo\BaseQueryDemo.csproj", "{14F2DB84-622A-4982-AC3F-25B20188688D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo", "BaseQueryDemo\BaseQueryDemo.csproj", "{14F2DB84-622A-4982-AC3F-25B20188688D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo.Entities", "BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj", "{BD7A4E13-BDF1-48BA-8E69-666EF2016772}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo.Entities", "BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj", "{BD7A4E13-BDF1-48BA-8E69-666EF2016772}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo.Model", "BaseQueryDemo.Model\BaseQueryDemo.Model.csproj", "{FC988A61-90DF-415D-A08A-D62147B0A189}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo.Model", "BaseQueryDemo.Model\BaseQueryDemo.Model.csproj", "{FC988A61-90DF-415D-A08A-D62147B0A189}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo.IRepository", "BaseQueryDemo.IRepository\BaseQueryDemo.IRepository.csproj", "{688F2865-D33F-437A-BA46-2B7114B464A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo.IRepository", "BaseQueryDemo.IRepository\BaseQueryDemo.IRepository.csproj", "{688F2865-D33F-437A-BA46-2B7114B464A9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQuery.Repository", "BaseQuery.Repository\BaseQuery.Repository.csproj", "{2394ACBA-1BBD-4662-B549-2B97BE904E1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo.Repository", "BaseQuery.Repository\BaseQueryDemo.Repository.csproj", "{2394ACBA-1BBD-4662-B549-2B97BE904E1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQuery.Common", "BaseQuery.Common\BaseQuery.Common.csproj", "{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseQueryDemo.Common", "BaseQuery.Common\BaseQueryDemo.Common.csproj", "{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo.IService", "BaseQueryDemo.IService\BaseQueryDemo.IService.csproj", "{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseQueryDemo.Service", "BaseQueryDemo.Services\BaseQueryDemo.Service.csproj", "{BBE08EC2-B740-4F81-A178-6867BEE324D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{833BA9FF-FF92-46C7-8885-A3E6951A3601}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository", "Repository", "{0CA355BB-F462-4B31-8308-D6A76CC77ECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{B7001DF4-4259-4151-BA31-5D9647606860}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{39307F42-EAD6-48D9-A40B-DBFED58478A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,9 +57,26 @@ Global
 		{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE08EC2-B740-4F81-A178-6867BEE324D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE08EC2-B740-4F81-A178-6867BEE324D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE08EC2-B740-4F81-A178-6867BEE324D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE08EC2-B740-4F81-A178-6867BEE324D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BD7A4E13-BDF1-48BA-8E69-666EF2016772} = {833BA9FF-FF92-46C7-8885-A3E6951A3601}
+		{FC988A61-90DF-415D-A08A-D62147B0A189} = {833BA9FF-FF92-46C7-8885-A3E6951A3601}
+		{688F2865-D33F-437A-BA46-2B7114B464A9} = {0CA355BB-F462-4B31-8308-D6A76CC77ECD}
+		{2394ACBA-1BBD-4662-B549-2B97BE904E1E} = {0CA355BB-F462-4B31-8308-D6A76CC77ECD}
+		{F5FF0AA7-8F98-4DBD-9996-3304CB7B484F} = {39307F42-EAD6-48D9-A40B-DBFED58478A8}
+		{ABB6F8E7-6D1E-4356-89B3-C7938082FCC8} = {B7001DF4-4259-4151-BA31-5D9647606860}
+		{BBE08EC2-B740-4F81-A178-6867BEE324D8} = {B7001DF4-4259-4151-BA31-5D9647606860}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF58F657-34C7-46FB-9280-AE188019FAA7}

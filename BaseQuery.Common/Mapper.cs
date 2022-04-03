@@ -1,6 +1,6 @@
 ﻿using Mapster;
 
-namespace BaseQuery.Common
+namespace BaseQueryDemo.Common
 {
     /// <summary>
     /// AutoMapper

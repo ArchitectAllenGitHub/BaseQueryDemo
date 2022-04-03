@@ -1,6 +1,6 @@
-using BaseQuery.Repository;
 using BaseQueryDemo.Extensions;
 using BaseQueryDemo.IRepository;
+using BaseQueryDemo.Repository;
 using SqlSugar;
 
 var builder = WebApplication.CreateBuilder(args);

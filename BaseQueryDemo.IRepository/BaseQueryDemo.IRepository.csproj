@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaseQuery.Common\BaseQuery.Common.csproj" />
+    <ProjectReference Include="..\BaseQuery.Common\BaseQueryDemo.Common.csproj" />
     <ProjectReference Include="..\BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj" />
     <ProjectReference Include="..\BaseQueryDemo.Model\BaseQueryDemo.Model.csproj" />
   </ItemGroup>

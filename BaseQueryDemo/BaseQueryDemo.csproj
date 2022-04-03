@@ -11,8 +11,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BaseQuery.Common\BaseQuery.Common.csproj" />
-    <ProjectReference Include="..\BaseQuery.Repository\BaseQuery.Repository.csproj" />
+    <ProjectReference Include="..\BaseQuery.Common\BaseQueryDemo.Common.csproj" />
+    <ProjectReference Include="..\BaseQuery.Repository\BaseQueryDemo.Repository.csproj" />
     <ProjectReference Include="..\BaseQueryDemo.Entities\BaseQueryDemo.Entities.csproj" />
     <ProjectReference Include="..\BaseQueryDemo.IRepository\BaseQueryDemo.IRepository.csproj" />
     <ProjectReference Include="..\BaseQueryDemo.Model\BaseQueryDemo.Model.csproj" />

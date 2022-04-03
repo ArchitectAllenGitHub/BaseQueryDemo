@@ -3,7 +3,7 @@ using BaseQueryDemo.IRepository;
 using BaseQueryDemo.Model.Input;
 using SqlSugar;
 
-namespace BaseQuery.Repository
+namespace BaseQueryDemo.Repository
 {
     /// <summary>
     /// 学校仓储

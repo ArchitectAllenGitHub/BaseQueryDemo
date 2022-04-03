@@ -1,5 +1,5 @@
 ﻿using AllenDynamicExpressions;
-using BaseQuery.Common;
+using BaseQueryDemo.Common;
 using BaseQueryDemo.Entities;
 using SqlSugar;
 using System.Linq.Expressions;
