@@ -11,7 +11,7 @@ namespace BaseQueryDemo.IRepository
     /// <summary>
     /// 学校仓储
     /// </summary>
-    public interface ISchoolRepository : IRepository<SchoolEntity, SchoolQueryInput, SchoolAddInput, SchoolModifyInput>
+    public interface ISchoolRepository : IRepository<SchoolEntity, SchoolAddInput, SchoolModifyInput, SchoolQueryInput>
     {
 
     }

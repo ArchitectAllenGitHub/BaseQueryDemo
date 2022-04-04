@@ -8,7 +8,7 @@ namespace BaseQueryDemo.Repository
     /// <summary>
     /// 学校仓储
     /// </summary>
-    public class SchoolRepository : BaseRepository<SchoolEntity, SchoolQueryInput, SchoolAddInput, SchoolModifyInput>, ISchoolRepository
+    public class SchoolRepository : BaseRepository<SchoolEntity, SchoolAddInput, SchoolModifyInput, SchoolQueryInput>, ISchoolRepository
     {
         public SchoolRepository(ISqlSugarClient db) : base(db)
         {
